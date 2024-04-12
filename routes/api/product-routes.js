@@ -32,16 +32,16 @@ router.get("/", async (req, res) => {
     price: product.price,
     stock: product.stock,
     category: {
-      category_id: product.category.id,
-      category_name: product.category.category_name,
+      category_id: product.category?.id,
+      category_name: product.category?.category_name,
     },
-    tags: product.tags.map((tag) => ({
+    tags: product.tags?.map((tag) => ({
       tag_id: tag.id,
       tag_name: tag.tag_name,
     })),
   }));
 
-  res.json(products);
+  res.json(formattedProducts);
 });
 
 // get one product
@@ -79,10 +79,10 @@ router.get("/:id", async (req, res) => {
     price: product.price,
     stock: product.stock,
     category: {
-      category_id: product.category.id,
-      category_name: product.category.category_name,
+      category_id: product.category?.id,
+      category_name: product.category?.category_name,
     },
-    tags: product.tags.map((tag) => ({
+    tags: product.tags?.map((tag) => ({
       tag_id: tag.id,
       tag_name: tag.tag_name,
     })),

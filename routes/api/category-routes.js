@@ -62,7 +62,9 @@ router.post("/", async (req, res) => {
   }
 
   //Create a new category
-  const newCategory = await Category.create({ category_name: categoryName });
+  const newCategory = await Category.create({
+    category_name: categoryName || category_name,
+  });
 
   return res.json(newCategory);
 });
