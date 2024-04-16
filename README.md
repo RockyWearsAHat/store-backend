@@ -1,6 +1,6 @@
 # Store Backend using SQL
 
-## [Demo](https://www.youtube.com/watch?v=efk-yeVUf-E){:target="_blank" rel="noopener"}
+## [Demo](https://www.youtube.com/watch?v=efk-yeVUf-E)
 
 This project is a store backend that utilizes SQL for data storage. It provides routes for managing categories, products, and tags.
 
